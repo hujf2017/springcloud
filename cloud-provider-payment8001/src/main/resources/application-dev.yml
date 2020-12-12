@@ -2,6 +2,8 @@ server:
   port: 8001
 
 spring:
+  application:
+    name: cloud-payment-service
   datasource:
     url: jdbc:mysql://116.62.138.50:3306/project?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
@@ -19,3 +21,12 @@ spring:
 mybatis:
   mapper-locations:
     - classpath:/mapper/*.xml
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka  用集群
+      defaultZone: http://eureka7001.com:7001/eureka ,http://eureka7002.com:7002/eureka
