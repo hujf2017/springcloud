@@ -19,7 +19,7 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentDao paymentDao;
     @Override
     public int create(Payment payment) {
-        return 1;
+        return paymentDao.create(payment);
     }
 
     @Override
