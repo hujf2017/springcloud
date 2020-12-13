@@ -1,0 +1,32 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    url: jdbc:mysql://116.62.138.50:3306/project?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+mybatis:
+  mapper-locations:
+    - classpath:/mapper/*.xml
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka  用集群
+      defaultZone: http://eureka7001.com:7001/eureka ,http://eureka7002.com:7002/eureka
