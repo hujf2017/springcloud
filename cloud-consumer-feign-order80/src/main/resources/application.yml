@@ -12,3 +12,8 @@ ribbon:
   ReadTimeout: 5000
   #连接时间
   ConnectTimeout: 5000
+
+logging:
+  level:
+    #什么接口 什么级别  debug 全部的日志
+    com.atguigu.springcloud.service.PaymentFeignService: debug
