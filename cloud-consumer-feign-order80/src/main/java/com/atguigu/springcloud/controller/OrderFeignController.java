@@ -25,4 +25,10 @@ public class OrderFeignController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         return service.getPaymentById(id);
     }
+
+    @GetMapping(value = "/pay/timeout")
+    public  String paymentFeignTimeout(){
+        //默认1秒钟的时间
+        return service.paymentFeignTimeout();
+    }
 }
