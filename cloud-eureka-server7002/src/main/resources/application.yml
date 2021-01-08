@@ -12,3 +12,5 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+  server:
+    peer-node-read-timeout-ms: 3000
