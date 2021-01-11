@@ -7,7 +7,7 @@ spring:
     config:
       ###分支
       label: master
-      name: application
+      name: config
       profile: dev
       uri: http://localhost:3344 #http://config-3344.com:3344/master/application-dev.yml
 
