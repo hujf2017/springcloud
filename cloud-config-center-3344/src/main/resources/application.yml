@@ -12,12 +12,12 @@ spring:
           search-paths: /cloud-config-center-3344/src/main/resources/res
       ###分支
       label: master
-#mq配置
-rabbitmq:
-  host: 116.62.138.50
-  port: 5672
-  username: hujf
-  password: hujf
+  #mq配置
+  rabbitmq:
+    host: 116.62.138.50
+    port: 5672
+    username: hujf
+    password: hujf
 
 eureka:
   client:
