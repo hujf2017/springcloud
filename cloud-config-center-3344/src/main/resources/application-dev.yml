@@ -7,9 +7,9 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: git@github.com:hujf2017/springcloud.git
           ###搜索目录
-          search-paths:
+          search-paths: /cloud-config-center-3344/src/main/resources
       ###分支
       label: master
 
