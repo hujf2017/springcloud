@@ -78,6 +78,11 @@ public class PaymentController {
             return "8001";
      }
 
+    @GetMapping(value = "/lb2")
+    public String getServerPort2(){
+        return "8001";
+    }
+
      @GetMapping(value = "/timeout")
      public String paymentFeignTimeout(){
          try {
