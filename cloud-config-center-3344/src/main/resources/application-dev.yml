@@ -1,21 +1,2 @@
-server:
-  port: 3344
-spring:
-  application:
-    name: cloud-config-center
-  cloud:
-    config:
-      server:
-        git:
-          uri: git@github.com:hujf2017/springcloud.git
-          ###搜索目录
-          search-paths: /cloud-config-center-3344/src/main/resources
-      ###分支
-      label: master
-
-eureka:
-  client:
-    register-with-eureka: false
-    service-url:
-      #defaultZone: http://localhost:7001/eureka
-      defaultZone: http://eureka7001.com:7001/eureka ,http://eureka7002.com:7002/eureka
+config:
+  info: dev version-1.0.0
